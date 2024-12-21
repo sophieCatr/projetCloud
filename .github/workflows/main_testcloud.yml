@@ -52,8 +52,8 @@ jobs:
         with:
           name: node-app
 
-      # - name: Unzip artifact for deployment
-      #   run: unzip release.zip
+      - name: Unzip artifact for deployment
+        run: unzip release.zip
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -72,7 +72,7 @@ jobs:
         with:
           app-name: 'testSophie'
           slot-name: 'Production'
-          package: .
+          package: ./frontCloud/dist/front-cloud/browser
           
           
           
