@@ -21,6 +21,10 @@ jobs:
         with:
           node-version: 'Iron'
 
+      - name: test
+        run: |
+          ls
+
       - name: npm install, build, and test
         run: |
           npm install
